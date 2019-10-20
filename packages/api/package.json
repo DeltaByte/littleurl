@@ -1,16 +1,13 @@
 {
-  "name": "littureurl-api",
-  "version": "1.0.0",
-  "description": "API for littleURL",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "dynamoose": "^1.11.1",
     "koa": "^2.10.0",
     "koa-router": "^7.4.0",
+    "mongoose": "^5.7.5",
     "serverless-http": "^2.3.0"
   }
 }

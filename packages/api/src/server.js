@@ -1,6 +1,6 @@
 import Koa from 'koa'
 import Router from 'koa-router'
-import { handler as redirectHandler } from './redirect'
+import { handler as redirectHandler } from './controllers/redirect'
 
 // init koa
 const app = new Koa()

@@ -1,4 +1,4 @@
-import wrapper from './helpers'
+import wrapper from '../helpers'
 
 /** @typedef { import('koa').Context } Context */
 

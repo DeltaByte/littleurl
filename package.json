@@ -1,0 +1,17 @@
+{
+  "name": "littleurl",
+  "version": "1.0.0",
+  "repository": "git@github.com:DeltaByte/littleurl.git",
+  "author": "DeltaByte <thedeltabyte@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "lerna": "^3.18.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  }
+}
