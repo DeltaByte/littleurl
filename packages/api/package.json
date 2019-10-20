@@ -1,0 +1,16 @@
+{
+  "name": "littureurl-api",
+  "version": "1.0.0",
+  "description": "API for littleURL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.10.0",
+    "koa-router": "^7.4.0",
+    "serverless-http": "^2.3.0"
+  }
+}
