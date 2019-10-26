@@ -1,8 +1,8 @@
 {
+  "name": "littleurl-api",
+  "version": "0.0.0",
+  "author": "DeltaByte <thedeltabyte@gmail.com>",
   "main": "server.js",
-  "scripts": {
-    "test": "jest"
-  },
   "dependencies": {
     "dynamoose": "^1.11.1",
     "koa": "^2.10.0",

@@ -3,7 +3,7 @@ const targetCoverage = 50
 module.exports = {
   clearMocks: true,
   coveragePathIgnorePatterns: [
-    'tests',
+    'test',
     'lib'
   ],
   coverageThreshold: {
@@ -15,7 +15,7 @@ module.exports = {
   },
   testEnvironment: 'node',
   testMatch: [
-    '**/tests/**/*.js'
+    '**/test/**/*.js'
   ],
   transform: {
     '^.+\\.js?$': 'babel-jest'

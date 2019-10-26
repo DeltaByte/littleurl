@@ -1,10 +1,21 @@
 {
   "name": "littleurl",
-  "version": "1.0.0",
   "repository": "git@github.com:DeltaByte/littleurl.git",
   "author": "DeltaByte <thedeltabyte@gmail.com>",
   "license": "MIT",
-  "private": false,
+  "private": true,
+  "engines": {
+    "node": "^10.16",
+    "yarn": "^1.17"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
   "dependencies": {
     "lerna": "^3.18.1"
   },
