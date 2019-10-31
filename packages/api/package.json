@@ -4,10 +4,10 @@
   "author": "DeltaByte <thedeltabyte@gmail.com>",
   "main": "server.js",
   "dependencies": {
-    "dynamoose": "^1.11.1",
+    "@hapi/joi": "^16.1.7",
+    "dynamodb": "^1.2.1",
     "koa": "^2.10.0",
     "koa-router": "^7.4.0",
-    "mongoose": "^5.7.5",
     "serverless-http": "^2.3.0"
   }
 }

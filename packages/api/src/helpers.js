@@ -36,3 +36,17 @@ export const reservedRoutes = [
   '/api',
   '/dashboard'
 ]
+
+/**
+ * Get the table name from the environment or return default
+ * 
+ * TODO: this probably needs refactoring when other DB providers get added
+ *
+ * @param {string} name
+ * @returns {string}
+ */
+export const tableName = (name) => {
+  const envvar = `DYNAMO_TABLE_${name.toUpperCase()}`
+  const prefix = 'littleurl-'
+  return process.env[envvar] || `${prefix}${name.toLowerCase()}`
+}
