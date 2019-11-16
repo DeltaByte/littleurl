@@ -5,7 +5,9 @@
   "main": "server.js",
   "dependencies": {
     "@hapi/joi": "^16.1.7",
+    "aws-sdk": "^2.562.0",
     "dynamodb": "^1.2.1",
+    "dynamoose": "^1.11.1",
     "koa": "^2.10.0",
     "koa-router": "^7.4.0",
     "serverless-http": "^2.3.0"
