@@ -1,7 +1,7 @@
 {
   "name": "littleurl",
   "repository": "git@github.com:DeltaByte/littleurl.git",
-  "author": "DeltaByte <thedeltabyte@gmail.com>",
+  "author": "DeltaByte (https://github.com/deltabyte)",
   "license": "MIT",
   "private": true,
   "engines": {
