@@ -20,7 +20,8 @@ const options = {
  */
 export const validation = {
   domain: Joi.string().domain().required(),
-  slug: Joi.string().pattern(/^[\w-]+$/).min(3).max(128),
+  slug: Joi.string().pattern(/^[\w-]+$/).min(3).max(128).required(),
+  target: Joi.string().uri({ scheme: /https?/, domain: true }).required(),
   description: Joi.string().max(1024)
 }
 
@@ -42,6 +43,11 @@ const schema = new dynamoose.Schema(
       rangeKey: true,
       required: true,
       validate: (value) => !validation.slug.validate(value).error
+    },
+    target: {
+      type: String,
+      required: true,
+      validate: (value) => !validation.target.validate(value).error
     },
     description: {
       type: String,

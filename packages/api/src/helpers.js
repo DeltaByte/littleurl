@@ -5,7 +5,41 @@ import serverless from 'serverless-http'
  * Detect if the current environment is AWS lambda
  */
 export const isLambda = () => {
-  return process.env.BUILD_TARGET === 'lambda'
+  if ((process.env.AWS_EXECUTION_ENV || '').match(/AWS_Lambda_.+/)) {
+    return true
+  }
+}
+
+export const getProvider = () => {
+  // AWS
+  if (process.env.AWS_EXECUTION_ENV) {
+    const env = process.env.AWS_EXECUTION_ENV
+    let provider = { name: 'AWS' }
+
+    // service TODO: strip each section from total string
+    if (env.match(/AWS_Lambda.+/)) {
+      provider.service = 'Lambda'
+    } else if (env.match(/AWS_ECS_EC2.+/)) {
+      provider.service = 'ECS'
+    } else if (env.match(/AWS_ECS_FARGATE.+/)) {
+      provider.service = 'Fargate'
+    }
+
+    // runtime
+    provider.runtime = env.split('_').pop()
+
+    return `${provider.name};${provider.service};${provider.runtime}`
+  }
+
+  // GCP
+  if (process.env.GOOGLE_RUNTIME) {
+    return 'GCP'
+  }
+
+  // Azure
+  if (process.env.AZURE_RUNTIME) {
+    return 'Azure'
+  }
 }
 
 /**
